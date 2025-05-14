@@ -629,7 +629,7 @@ body {
 }
 
 .searchMenu .results a img {
-    width: 300px;
+    width: 400px;
     height: 300px;
     /* padding-top: 2px; */
     border-radius: 8px 8px 0px 0px;
@@ -849,7 +849,7 @@ body {
 }
 
 #featured .featuredProducts a img {
-    width: 300px;
+    width: 310px;
     height: 300px;
     border-radius: 8px 8px 0px 0px;
 }
@@ -2937,7 +2937,7 @@ body {
     padding: 0px 3px;
     text-align: center;
     position: absolute;
-    right: 25%;
+    right: 22%;
     bottom: 65%;
 }
 
@@ -3476,11 +3476,12 @@ body {
     border-radius: 8px;
     border-collapse: separate;
     overflow: hidden;
+    width: 79%;
 
 }
 
 #ShoppingCart .table1 th {
-    padding: 16px 12px;
+    padding: 16px 14px;
 }
 
 #ShoppingCart .table1 tr {
