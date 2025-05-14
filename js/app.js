@@ -358,4 +358,7 @@ window.addEventListener('mousemove',function(event){
   
   cursorSM.style.top=`${top}px`;
   cursorSM.style.left=`${left}px`;
+
+
+  
 });

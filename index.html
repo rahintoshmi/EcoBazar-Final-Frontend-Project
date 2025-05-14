@@ -131,38 +131,32 @@
           </div>
         </div>
 
-        <div class="offcanvas offcanvas-start"
-          tabindex="-1"
-          id="offcanvasExample"
-          aria-labelledby="offcanvasExampleLabel">
-          <div class="offcanvas-body">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li>
-                <button
-                  class="btn btn-secondary dropdown-toggle"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                >
-                  <a href="./shop.html">Shop</a>
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Men's Fashion</a></li>
-                  <li><a class="dropdown-item" href="#">Women's Fashion</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Electronics</a>
-                  </li>
-                  <li><a class="dropdown-item" href="#">Kids</a></li>
-                  <li><a class="dropdown-item" href="#">Others</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">About Us</a></li>
-            </ul>
-          </div>
-         <span><i class="fa-solid fa-xmark"></i></span>
-        </div>
+       <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-body">
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li class="dropdown">
+        <!-- Shop Link (Navigates to shop.html) -->
+        <a href="./shop.html" class="shop-link">Shop</a>
+        <!-- Dropdown Toggle (Only opens the menu) -->
+        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        </button>
+        <!-- Dropdown Menu -->
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Men's Fashion</a></li>
+          <li><a class="dropdown-item" href="#">Women's Fashion</a></li>
+          <li><a class="dropdown-item" href="#">Electronics</a></li>
+          <li><a class="dropdown-item" href="#">Kids</a></li>
+          <li><a class="dropdown-item" href="#">Others</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+  </div>
+  <span><i class="fa-solid fa-xmark"></i></span>
+</div>
       </section>
 
       <!-- Mobile Menu Ends -->
@@ -646,7 +640,7 @@
                     <div class="label">
                       Sale 50%
                     </div>
-                    <a href="./shop.html"><img class="img-fluid" src="./images/apple.png" alt=""></a>
+                    <a href="./shop.html"><img class="img-fluid" src="./images/apple.png" alt="" style="width: 248px; border-radius: 8px 8px 0px 0px;"></a>
 
                   
                    <div class="quickLinks">
@@ -676,7 +670,7 @@
               <div class="col-lg-2 col-6">
                 <div class="productCard">
                   <div class="productThumb">
-                    <a href="./product_details.html"><img class="img-fluid" src="./images/cabbage.png" alt=""></a>
+                    <a href="./product_details.html"><img class="img-fluid" src="./images/cabbage.png" alt="" style="width: 248px; border-radius: 8px 8px 0px 0px;"></a>
 
                   
                    <div class="quickLinks">
@@ -765,7 +759,7 @@
                <div class="col-lg-2 col-6">
                 <div class="productCard">
                   <div class="productThumb">
-                    <a href="./shop.html"><img class="img-fluid" src="./images/corn.png" alt=""></a>
+                    <a href="./shop.html"><img class="img-fluid" src="./images/corn.png" alt="" style="width: 248px; border-radius: 8px 8px 0px 0px;"></a>
 
                   
                    <div class="quickLinks">
@@ -1340,7 +1334,7 @@
                         <div class="productThumb">
                             <div class="quickLinks">
                                 <ul>
-                                    <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li><a href="./wishlist.html"><i class="fa-regular fa-heart"></i></a></li>
                                     <li><a href="#"><i class="fa-regular fa-eye"></i></a></li>
                                 </ul>
 
@@ -1348,12 +1342,12 @@
                             <div class="label">
                                 Sale 50% 
                             </div>
-                            <a href="#"><img class="img-fluid" src="./images/apple.png" alt=""></a>
+                            <a href="./shop.html"><img class="img-fluid" src="./images/apple.png" alt=""></a>
                             
                         </div>
                         
                         <div class="productCnt">
-                            <a href="#" class="productTitle">Green Apple</a>
+                            <a href="./shop.html" class="productTitle">Green Apple</a>
                             <p>$14.99 <del>$20.99</del></p>
                             <div class="rating">
                                 <i class="fa-solid fa-star"></i>
@@ -1363,7 +1357,7 @@
                                 <i class="fa-solid fa-star empty"></i>
 
                             </div>
-                            <a href="#" class="cardBtn"><i class="fa-solid fa-bag-shopping"></i></a>
+                            <a href="./shopping_cart.html" class="cardBtn"><i class="fa-solid fa-bag-shopping"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1372,18 +1366,18 @@
                         <div class="productThumb">
                             <div class="quickLinks">
                                 <ul>
-                                    <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li><a href="./wishlist.html"><i class="fa-regular fa-heart"></i></a></li>
                                     <li><a href="#"><i class="fa-regular fa-eye"></i></a></li>
                                 </ul>
 
                             </div>
                             
-                            <a href="#"><img class="img-fluid" src="./images/cabbage.png" alt=""></a>
+                            <a href="./product_details.html"><img class="img-fluid" src="./images/cabbage.png" alt=""></a>
                             
                         </div>
                         
                         <div class="productCnt">
-                            <a href="#" class="productTitle">Chanise Cabbage</a>
+                            <a href="./product_details.html" class="productTitle">Chanise Cabbage</a>
                             <p>$14.99</p>
                             <div class="rating">
                                 <i class="fa-solid fa-star"></i>
@@ -1393,7 +1387,7 @@
                                 <i class="fa-solid fa-star empty"></i>
 
                             </div>
-                            <a href="#" class="cardBtn"><i class="fa-solid fa-bag-shopping"></i></a>
+                            <a href="./shopping_cart.html" class="cardBtn"><i class="fa-solid fa-bag-shopping"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1402,17 +1396,17 @@
                         <div class="productThumb">
                             <div class="quickLinks">
                                 <ul>
-                                    <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+                                    <li><a href="./wishlist.html"><i class="fa-regular fa-heart"></i></a></li>
                                     <li><a href="#"><i class="fa-regular fa-eye"></i></a></li>
                                 </ul>
 
                             </div>
-                            <a href="#"><img class="img-fluid" src="./images/capsicum.png" alt=""></a>
+                            <a href="./shop.html"><img class="img-fluid" src="./images/capsicum.png" alt=""></a>
                             
                         </div>
                         
                         <div class="productCnt">
-                            <a href="#" class="productTitle">Green Capsicum</a>
+                            <a href="./shop.html" class="productTitle">Green Capsicum</a>
                             <p>$14.99</p>
                             <div class="rating">
                                 <i class="fa-solid fa-star"></i>
@@ -1422,7 +1416,7 @@
                                 <i class="fa-solid fa-star empty"></i>
 
                             </div>
-                            <a href="#" class="cardBtn"><i class="fa-solid fa-bag-shopping"></i></a>
+                            <a href="./shopping_cart.html" class="cardBtn"><i class="fa-solid fa-bag-shopping"></i></a>
                         </div>
                     </div>
                 </div>

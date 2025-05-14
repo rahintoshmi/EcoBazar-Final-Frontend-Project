@@ -352,6 +352,11 @@ body {
 
 }
 
+.dropdown-toggle {
+    background: none;
+    border: none;
+}
+
 #mobilemenu .offcanvas-body ul li a {
     font-size: 25px;
     font-family: var(--font-family);
@@ -623,6 +628,13 @@ body {
     padding-bottom: 100px;
 }
 
+.searchMenu .results a img {
+    width: 300px;
+    height: 300px;
+    /* padding-top: 2px; */
+    border-radius: 8px 8px 0px 0px;
+}
+
 .searchMenu .closeSearch {
     position: absolute;
     top: 20px;
@@ -834,6 +846,12 @@ body {
 .productCard:hover .cardBtn {
     color: var(--gray-scale-white);
     background-color: var(--branding-success);
+}
+
+#featured .featuredProducts a img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px 8px 0px 0px;
 }
 
 /*=====  End of Featured Products  ======*/
@@ -1177,7 +1195,7 @@ body {
 =            Small Cards            =
 =============================================*/
 #SmallCards .card {
-    border: 1px solid var(--gray-scale-gray-–-100);
+    border: 1px solid var(--gray-scale-gray-–-100) !important;
     border-radius: 6px;
     background-color: var(--gray-scale-white);
 }
@@ -1288,7 +1306,6 @@ body {
 #SmallCards .card {
     position: relative;
 }
-
 
 /*=====  End of Small Cards  ======*/
 
@@ -1411,7 +1428,7 @@ body {
 =============================================*/
 #CustomerReviews {
     background-image: url(../images/Testimonials.png);
-    padding: 70px 0px 70px 0px;
+    padding: 70px 0px 80px 0px;
     position: relative;
 
 }
@@ -1435,7 +1452,7 @@ body {
 
 #CustomerReviews .reviews1, #CustomerReviews .reviews2, #CustomerReviews .reviews3 {
     border-radius: 8px;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.01);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.07);
     background-color: var(--gray-scale-white);
     margin: auto;
     padding: 24px 12px 12px 14px;
@@ -1655,6 +1672,18 @@ body {
     padding: 10px 12px 8px 15px;
     line-height: 20px;
 }
+
+#DekstopFooter .quickLinks a .fa-facebook-f {
+    margin-left: 4px;
+    width: 15px;
+    height: 8px;
+}
+
+#DekstopFooter .quickLinks a .fa-pinterest-p {
+    margin-left: 2px;
+}
+
+
 
 #DekstopFooter .quickLinks a i {
     width: 18px;
@@ -2221,7 +2250,8 @@ body {
 
 #main input[type="range"], #mobileSidemenuShop input[type="range"] {
     accent-color: var(--branding-success);
-    color: white;
+    width: 100%;
+
 }
 
 #main button.filter, #mobileSidemenuShop button.filter {
@@ -2266,6 +2296,7 @@ body {
 #main .cartImage p, #mobileSidemenuShop .row p {
     font-weight: 400;
     line-height: 150%;
+    margin-top: 8px;
     color: var(--gray-scale-gray-–-600);
 }
 
@@ -2340,15 +2371,15 @@ body {
     color: var(--gray-scale-gray-–-900);
 }
 
-#main .accordion-item2 h3, #mobileSidemenuShop .accordion-item2 h3 {
+#main .accordion-item h3, #mobileSidemenuShop .accordion-item h3 {
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
     color: var(--gray-scale-gray-–-700);
-    margin-left: 20px;
+
 }
 
-#main .accordion-item2 span, #mobileSidemenuShop .accordion-item2 span {
+#main .accordion-item span, #mobileSidemenuShop .accordion-item span {
     font-weight: 500;
     color: var(--gray-scale-gray-–-900);
 }
@@ -2748,6 +2779,11 @@ body {
 
 }
 
+#DekstopFooterShop .logo a:hover span {
+    border-bottom: 6px solid var(--gray-scale-gray-–-900);
+
+}
+
 /*=====  End of footer for dekstop shop  ======*/
 /*=====  End of Shop page css design  ======*/
 
@@ -2843,7 +2879,7 @@ body {
     line-height: 120%;
     color: var(--gray-scale-white);
     border-radius: 0 6px 6px 0;
-    padding: 16px 24px;
+    padding: 16.5px 24px;
     outline: none;
     border: none;
     position: absolute;
@@ -3623,6 +3659,16 @@ body {
     background-color: var(--branding-success);
 }
 
+#subscriber .quickLinks a .fa-facebook-f {
+    margin-left: 3px;
+    width: 15px;
+    height: 8px;
+}
+
+#subscriber .quickLinks a .fa-pinterest-p {
+    margin-left: 2px;
+}
+
 /*=====  End of Subscriber  for shopping cart ======*/
 
 
@@ -3797,6 +3843,21 @@ body {
     display: block;
     width: 100%;
 
+}
+
+.payment-methods {
+    display: block;
+    /* Flex container */
+    gap: 20px;
+    /* Space between items */
+    align-items: center;
+    /* Center vertically */
+    flex-wrap: wrap;
+    /* Wrap if space is small */
+}
+
+.payment-methods label {
+    display: block;
 }
 
 /*=====  End of billing body  ======*/
@@ -4240,6 +4301,17 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 /*=====  End of description  ======*/
+
+#productDetailsShop .quickLinks a .fa-facebook-f {
+    margin-left: 3px;
+    width: 15px;
+    height: 8px;
+}
+
+#productDetailsShop .quickLinks a .fa-pinterest-p {
+    margin-left: 2px;
+}
+
 /*=====  End of product Details   ======*/
 
 
@@ -4424,6 +4496,16 @@ input[type=number]::-webkit-inner-spin-button {
 #wishlist img {
     text-align: center;
     margin-top: 20px;
+}
+
+#wishlist .quickLinks a .fa-facebook-f {
+    margin-left: 3px;
+    width: 15px;
+    height: 8px;
+}
+
+#wishlist .quickLinks a .fa-pinterest-p {
+    margin-left: 2px;
 }
 
 /* main body ends */
