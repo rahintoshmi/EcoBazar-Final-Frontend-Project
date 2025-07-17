@@ -293,7 +293,9 @@ body {
 
 }
 
-
+#mobilemenu {
+    position: fixed;
+}
 
 /*=====  End of mobile menu  ======*/
 
@@ -306,6 +308,7 @@ body {
 #mobilemenu .headsection {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
     gap: 15%;
     padding: 20px 0;
@@ -313,6 +316,8 @@ body {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
 }
+
+
 
 #mobilemenu .quickLinks ul {
     display: flex;
@@ -401,7 +406,8 @@ body {
 }
 
 #mobilemenu {
-    position: relative;
+    position: fixed;
+    width: 100%;
 }
 
 #mobilemenu .searchMenu {
