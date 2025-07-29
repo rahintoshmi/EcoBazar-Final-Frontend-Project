@@ -26,10 +26,45 @@ document.querySelector('.fa-xmark').addEventListener('click', function() {
     var offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasExample'));
     offcanvas.hide();
 });
+//features slider
+$('#featured .featuredProducts .row').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    responsive: [
+      {
+        breakpoint: 992, // For tablets
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: false // Hide arrows on tablets
+        }
+      },
+      {
+        breakpoint: 768, // For smaller tablets
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false // Hide arrows on smaller tablets
+        }
+      },
+      {
+        breakpoint: 576, // For mobile
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false // Hide arrows on mobile
+        }
+      }
+    ]
+  });
   //product category slider
    $('#productCategory .categoryCard').slick({
     slidesToShow: 5,
     slidesToScroll: 1,
+    arrows: false,
     autoplay: true,
     autoplaySpeed: 1000,
     responsive: [
@@ -76,6 +111,23 @@ document.querySelector('.fa-xmark').addEventListener('click', function() {
       }
     );
   });
+  //seller products slider
+  $('#sellerProduct .featuredProducts .row').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  arrows: false,
+  autoplaySpeed: 1000,
+  responsive: [
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
   //shopping cart increment decrement 
   // cart.js - Works for both shopping cart and billing information pages
   // Initialize cart data in localStorage if not exists

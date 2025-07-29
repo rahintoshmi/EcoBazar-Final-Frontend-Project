@@ -38,6 +38,10 @@
         padding-bottom: 27px;
     }
 
+    #banner {
+        margin-top: 73px;
+    }
+
     #mobileFooter {
         padding: 10px 10px;
     }
@@ -68,7 +72,7 @@
     }
 
     .heading h2 {
-        font-size: 27px;
+        font-size: 23px;
     }
 
     #productCategory .heading2 a {
@@ -139,7 +143,6 @@
     #foodstore {
         padding: 24px 14px;
     }
-
     #foodstore .foodstoreCnt .p1, #foodstore .foodstoreCnt .p3 {
         font-size: 16px;
         margin-left: 9%;
@@ -276,7 +279,7 @@
         font-size: 12px;
     }
 
-    #ShoppingCart .table1 {}
+    /* #ShoppingCart .table1 {} */
 
     #topHeaderShop address {
         font-size: 8px;
@@ -579,7 +582,8 @@
         padding: 2px 27px;
         margin: 5px 0;
     }
-    #description .descriptionCnt .row{
+
+    #description .descriptionCnt .row {
         display: flex;
         flex-wrap: nowrap;
     }

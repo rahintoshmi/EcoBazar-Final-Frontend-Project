@@ -459,7 +459,7 @@ body {
 
 /* Header Layout */
 .headsection {
-    padding: 12px 0;
+    padding: 0px 0;
 }
 
 /* Menu Button */
@@ -618,7 +618,7 @@ body {
 
 .show .dropdown-menu {
     max-height: 500px;
-    
+
 }
 
 .dropdown-item {
@@ -892,10 +892,17 @@ body {
 
 .searchMenu .closeSearch {
     position: absolute;
-    top: 20px;
-    right: 50px;
-    border: none;
+    top: 100px;
+    right: 30px;
+    border: 1px solid var(--gray-scale-gray-–-500);
+    border-radius: 50%;
+    padding: 5px 10px;
     background-color: transparent;
+}
+
+.searchMenu .closeSearch:hover {
+    color: white;
+    background-color: var(--branding-success-dark);
 }
 
 /* SEARCH BOX ENDS */
@@ -1109,6 +1116,9 @@ body {
     border-radius: 8px 8px 0px 0px;
 }
 
+/* Custom arrow styling */
+
+
 /*=====  End of Featured Products  ======*/
 
 
@@ -1243,6 +1253,13 @@ body {
 .fade-up {
     animation: fadeUp 2s ease-out forwards;
 }
+
+
+
+/* Create a scroll timeline */
+
+
+
 
 /*=====  End of food store  ======*/
 
