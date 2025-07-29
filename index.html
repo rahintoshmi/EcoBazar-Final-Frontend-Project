@@ -19,8 +19,7 @@
   </head>
   <body>
     <!-- For cursor -->
-     <div class="cursor"></div>
-     <div class="cursor-sm"></div>
+     <div class="cursor-sm d-lg-block d-none"></div>
 
     <!-- For cursor ends -->
     <!-- Header Section  -->
@@ -99,66 +98,105 @@
         </div>
       </section>
       <!-- Mobile Menu -->
-      <section id="mobilemenu" class="d-lg-none">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="headsection">
-                <a
-                  class="btn btn-primary"
-                  data-bs-toggle="offcanvas"
-                  href="#offcanvasExample"
-                  role="button"
-                  aria-controls="offcanvasExample"
-                >
-                  <i class="fa-solid fa-align-justify"></i>
-                </a>
-              <!--Mobile Menu Header  -->
-              <div class="col">
-                <a href="./index.html"><img src="./images/logo.png" alt="" /></a>
-              </div>
-              <div class="col quickLinks">
-                <ul>
-                  <li>
-                    <a class="glassmenu" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                  </li>
-                  <li>
-                    <a href="./shopping_cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <!-- Mobile Menu Header ends -->
-            </div>
+  <section id="mobilemenu" class="d-lg-none">
+  <div class="container-fluid px-0">
+    <div class="headsection">
+      <div class="d-flex align-items-center justify-content-between w-100 px-3 py-2">
+        <!-- Menu Button -->
+        <div class="col-auto ps-0">
+          <button class="btn btn-menu" data-bs-toggle="offcanvas" href="#offcanvasExample">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        
+        <!-- Logo - Centered -->
+        <div class="col text-center">
+          <a href="./index.html">
+            <img src="./images/logo.png" alt="Ecobazar" class="mobile-logo">
+          </a>
+        </div>
+        
+        <!-- Icons Group - Right Aligned -->
+        <div class="col-auto pe-0">
+          <div class="icon-group">
+            <a href="#" class="glassmenu me-2"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="./shopping_cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
 
-       <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <!-- Offcanvas Menu -->
+ <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
+  <div class="offcanvas-header">
+    <div class="offcanvas-logo">
+      <a href="./index.html">
+        <img src="./images/logo.png" alt="Logo" class="img-fluid">
+      </a>
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+  
   <div class="offcanvas-body">
-    <ul>
-      <li><a href="./index.html">Home</a></li>
-      <li class="dropdown">
-        <!-- Shop Link (Navigates to shop.html) -->
-        <a href="./shop.html" class="shop-link">Shop</a>
-        <!-- Dropdown Toggle (Only opens the menu) -->
-        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        </button>
-        <!-- Dropdown Menu -->
+    <ul class="mobile-nav">
+      <li class="nav-item">
+        <a href="./index.html" class="nav-link">
+          <span class="nav-icon"><i class="fa-solid fa-house"></i></span>
+          <span class="nav-text">Home</span>
+        </a>
+      </li>
+      
+      <li class="nav-item dropdown">
+        <div class="dropdown-header" data-bs-toggle="dropdown">
+          <span class="nav-icon"><i class="fa-solid fa-store"></i></span>
+          <span class="nav-text">Shop</span>
+          <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+        </div>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Men's Fashion</a></li>
-          <li><a class="dropdown-item" href="#">Women's Fashion</a></li>
-          <li><a class="dropdown-item" href="#">Electronics</a></li>
-          <li><a class="dropdown-item" href="#">Kids</a></li>
-          <li><a class="dropdown-item" href="#">Others</a></li>
+          <li class="dropdown-item"><a href="#"><i class="fa-solid fa-shirt"></i> Men's Fashion</a></li>
+          <li class="dropdown-item"><a href="#"><i class="fa-solid fa-person-dress"></i> Women's Fashion</a></li>
+          <li class="dropdown-item"><a href="#"><i class="fa-solid fa-laptop"></i> Electronics</a></li>
+          <li class="dropdown-item"><a href="#"><i class="fa-solid fa-child"></i> Kids</a></li>
+          <li class="dropdown-item"><a href="#"><i class="fa-solid fa-ellipsis"></i> Others</a></li>
         </ul>
       </li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">About Us</a></li>
+      
+      <li class="nav-item">
+        <a href="#" class="nav-link">
+          <span class="nav-icon"><i class="fa-solid fa-blog"></i></span>
+          <span class="nav-text">Blog</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="#" class="nav-link">
+          <span class="nav-icon"><i class="fa-solid fa-envelope"></i></span>
+          <span class="nav-text">Contact</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="#" class="nav-link">
+          <span class="nav-icon"><i class="fa-solid fa-info-circle"></i></span>
+          <span class="nav-text">About Us</span>
+        </a>
+      </li>
     </ul>
+    
+    <div class="offcanvas-footer">
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p class="copyright">© 2023 Your Brand. All rights reserved.</p>
+    </div>
   </div>
-  <span><i class="fa-solid fa-xmark"></i></span>
 </div>
-      </section>
-
+</section>
       <!-- Mobile Menu Ends -->
     </header>
 

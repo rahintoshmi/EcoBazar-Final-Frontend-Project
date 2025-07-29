@@ -21,9 +21,11 @@ $(document).ready(function(){
     $(".searchMenu").removeClass("active");
   });
   //mobile menu cancel icon
-   $('#mobilemenu .fa-xmark').click(function() {
-    $('#offcanvasExample').offcanvas('hide');
-  });
+   // Add this to your existing JS
+document.querySelector('.fa-xmark').addEventListener('click', function() {
+    var offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasExample'));
+    offcanvas.hide();
+});
   //product category slider
    $('#productCategory .categoryCard').slick({
     slidesToShow: 5,
@@ -346,19 +348,15 @@ $(document).ready(function(){
 });
 
 //for mouse move
+let cursorSM = document.querySelector('.cursor-sm');
 
-let cursor=document.querySelector('.cursor')
-let cursorSM=document.querySelector('.cursor-sm')
-window.addEventListener('mousemove',function(event){
-  let top = event.pageY;
-  let left=event.pageX;
-  console.log(top);
-  cursor.style.top=`${top}px`;
-  cursor.style.left=`${left}px`;
-  
-  cursorSM.style.top=`${top}px`;
-  cursorSM.style.left=`${left}px`;
+// Make sure element exists
+if (!cursorSM) {
+    console.error("Cursor element not found!");
+} else {
+    window.addEventListener('mousemove', function(event) {
+        cursorSM.style.transform = `translate(calc(${event.clientX}px - 50%), calc(${event.clientY}px - 50%))`;
+    });
+}
 
 
-  
-});

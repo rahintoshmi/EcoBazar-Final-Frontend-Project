@@ -86,30 +86,18 @@ body {
     background-color: var(--branding-success-dark);
 }
 
-.cursor {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid var(--gray-scale-gray-–-500);
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
-
 .cursor-sm {
-    width: 5px;
-    height: 5px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background-color: var(--branding-success-dark);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     transform: translate(-50%, -50%);
-    transition: 0.15s;
     pointer-events: none;
+    transition: 0.10s ease;
+    z-index: 9999;
 }
 
 /* CSS comments Ends */
@@ -185,27 +173,50 @@ body {
 
 #mainHeader .mainMenu .submenu {
     position: absolute;
-    border: 1px solid #ccc;
-    min-width: 200px;
+    min-width: 240px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     opacity: 0;
     visibility: hidden;
-    margin-top: 50px;
-    transition: 0.35s ease;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    z-index: 1000;
+    padding: 8px 0;
+    margin-top: 5px;
 }
 
-#mainHeader .mainMenu .submenu a {
-    display: block;
-    padding: 8px 13px;
-
-
-}
-
-#mainHeader .mainMenu li:hover>.submenu {
+#mainHeader .mainMenu li:hover .submenu {
     opacity: 1;
     visibility: visible;
-    margin-top: 0px;
-    z-index: 8;
-    background-color: white;
+    transform: translateY(0);
+}
+
+/* Submenu items */
+#mainHeader .mainMenu .submenu li {
+    padding: 10px 20px;
+    transition: all 0.2s ease;
+}
+
+#mainHeader .mainMenu .submenu li:hover {
+    background: rgba(0, 120, 255, 0.05);
+    color: #0078ff;
+    padding-left: 22px;
+}
+
+#mainHeader .mainMenu .submenu::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 20px;
+    width: 12px;
+    height: 12px;
+    background: white;
+    transform: rotate(45deg);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
+    z-index: -1;
 }
 
 #mainHeader .quickLinks {
@@ -285,7 +296,7 @@ body {
 /*=============================================
 =            mobile menu            =
 =============================================*/
-#mobilemenu .btn-primary {
+/* #mobilemenu .btn-primary {
     border: none;
     background-color: transparent;
     color: #002603;
@@ -295,7 +306,7 @@ body {
 
 #mobilemenu {
     position: fixed;
-}
+} */
 
 /*=====  End of mobile menu  ======*/
 
@@ -305,7 +316,7 @@ body {
 =            Mobile Menu Header            =
 =============================================*/
 
-#mobilemenu .headsection {
+/* #mobilemenu .headsection {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -324,7 +335,6 @@ body {
     gap: 20px;
     align-items: center;
     justify-content: center;
-    /* transform: translateY(-50%); */
     position: absolute;
 }
 
@@ -344,14 +354,14 @@ body {
     display: inline-flex;
 
 
-}
+} */
 
 /*=====  End of Mobile Menu Header  ======*/
 
 /*=============================================
 =            mobile menu items            =
 =============================================*/
-#mobilemenu .offcanvas-start {
+/* #mobilemenu .offcanvas-start {
     padding-top: 27%;
     text-align: center;
 
@@ -435,12 +445,251 @@ body {
 #mobilemenu:hover span i {
     color: rgb(47, 73, 47);
 }
+    /* Fixed Header */
+/* Fixed Header */
+#mobilemenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-/*=====  End of mobile menu items  ======*/
-/*=====  End of Header section  ======*/
+/* Header Layout */
+.headsection {
+    padding: 12px 0;
+}
 
+/* Menu Button */
+.btn-menu {
+    border: none;
+    background: transparent;
+    color: var(--gray-scale-gray-900);
+    font-size: 20px;
+    padding: 5px 10px;
+}
 
+/* Logo Centering */
+.mobile-logo {
+    height: 30px;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+}
 
+/* Icons Group */
+.icon-group {
+    display: flex;
+    align-items: center;
+}
+
+.icon-group a {
+    color: var(--gray-scale-gray-900);
+    font-size: 18px;
+    padding: 5px;
+    transition: all 0.2s ease;
+}
+
+.icon-group a:hover {
+    color: var(--branding-success-dark);
+}
+
+/* Offcanvas Styling */
+/* Offcanvas Container */
+/* Offcanvas Container */
+.offcanvas {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.05);
+    width: 300px;
+    /* Fixed width for better mobile experience */
+}
+
+/* Header Section */
+.offcanvas-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.offcanvas-logo img {
+    max-height: 35px;
+    width: auto;
+    display: block;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: #666;
+    opacity: 1;
+    transition: all 0.3s ease;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.btn-close:hover {
+    color: #333;
+    transform: rotate(90deg);
+}
+
+/* Navigation Items */
+.mobile-nav {
+    padding: 10px 0;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-item {
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(0, 100, 0, 0.05);
+    color: var(--branding-success-dark);
+}
+
+.nav-icon {
+    width: 24px;
+    margin-right: 15px;
+    color: var(--branding-success-dark);
+    text-align: center;
+    font-size: 1rem;
+}
+
+.nav-text {
+    font-weight: 500;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: static;
+}
+
+.dropdown-header {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.dropdown-header:hover {
+    background: rgba(0, 100, 0, 0.05);
+}
+
+.dropdown-arrow {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.dropdown-menu {
+    background: rgba(0, 0, 0, 0.02);
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    list-style: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+}
+
+.show .dropdown-menu {
+    max-height: 500px;
+    
+}
+
+.dropdown-item {
+    padding: 12px 20px 12px 55px;
+    margin-left: 95px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-top: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.dropdown-item a {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    width: 100%;
+}
+
+.dropdown-item i {
+    margin-right: 12px;
+    font-size: 0.9rem;
+    width: 20px;
+    text-align: center;
+    color: var(--branding-success-dark);
+}
+
+.dropdown-item:hover {
+    background: rgba(0, 100, 0, 0.05);
+    color: var(--branding-success-dark);
+}
+
+/* Footer Section */
+.offcanvas-footer {
+    margin-top: 71px;
+    padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: #666;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.social-links a:hover {
+    background: rgba(0, 100, 0, 0.05);
+    color: var(--branding-success-dark);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 10px;
+}
 
 /*=============================================
 =            Banner Slider            =
