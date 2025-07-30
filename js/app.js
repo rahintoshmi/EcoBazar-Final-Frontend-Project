@@ -26,6 +26,18 @@ document.querySelector('.fa-xmark').addEventListener('click', function() {
     var offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasExample'));
     offcanvas.hide();
 });
+//for boxicon
+const scrollBtn = document.getElementById("scrollToBanner");
+  const banner = document.getElementById("banner");
+
+  window.addEventListener("scroll", () => {
+    const bannerBottom = banner.offsetTop + banner.offsetHeight;
+    if (window.scrollY > bannerBottom) {
+      scrollBtn.classList.add("show");
+    } else {
+      scrollBtn.classList.remove("show");
+    }
+  });
 //features slider
 $('#featured .featuredProducts .row').slick({
     slidesToShow: 4,
@@ -84,6 +96,8 @@ $('#featured .featuredProducts .row').slick({
     }
   ]
   });
+  //food store delay animation
+  
   AOS.init();// for AOS Animation
   //CounterUp animation
   var $counters = $(".count");
@@ -121,6 +135,21 @@ $('#featured .featuredProducts .row').slick({
   responsive: [
     {
       breakpoint: 576,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+//customer review slider
+$('#CustomerReviews .review-slider').slick({
+  slidesToShow: 3,
+  arrows: true,
+  prevArrow: $('#prev'),
+  nextArrow: $('#next'),
+  responsive: [
+    {
+      breakpoint: 992,
       settings: {
         slidesToShow: 1
       }

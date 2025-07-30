@@ -86,6 +86,31 @@ body {
     background-color: var(--branding-success-dark);
 }
 
+.scroll-box {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--branding-success);
+    color: var(--gray-scale-white);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 28px;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-box.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
 .cursor-sm {
     width: 10px;
     height: 10px;
@@ -168,7 +193,7 @@ body {
 
 #mainHeader .mainMenu li:hover>a,
 #mainHeader .mainMenu li a.active {
-    color: var(--gray-scale-gray-–-900);
+    color: var(--branding-success-dark);
 }
 
 #mainHeader .mainMenu .submenu {
@@ -200,9 +225,9 @@ body {
 }
 
 #mainHeader .mainMenu .submenu li:hover {
-    background: rgba(0, 120, 255, 0.05);
-    color: #0078ff;
-    padding-left: 22px;
+    background: rgba(147, 185, 131, 0.05);
+    color: #45a548;
+    padding-left: 10px;
 }
 
 #mainHeader .mainMenu .submenu::before {
@@ -269,7 +294,8 @@ body {
     bottom: 0;
     width: 100%;
     left: 0;
-    box-shadow: rgba(17, 12, 46, 0.55) 0px 48px 100px 0px;
+    box-shadow: rgba(146, 187, 149, 0.55) 0px 48px 100px 0px;
+    backdrop-filter: blur(10px);
     padding: 10px 0;
 }
 
@@ -288,7 +314,7 @@ body {
 }
 
 #mobileFooter ul li:hover a, #mobileFooter ul li:focus a, #mobileFooter ul li a.active {
-    color: var(--gray-scale-gray-–-900);
+    color: var(--branding-success-dark);
 }
 
 /*=====  End of Mobile Footer  ======*/
@@ -296,17 +322,7 @@ body {
 /*=============================================
 =            mobile menu            =
 =============================================*/
-/* #mobilemenu .btn-primary {
-    border: none;
-    background-color: transparent;
-    color: #002603;
-    margin-left: 10px;
 
-}
-
-#mobilemenu {
-    position: fixed;
-} */
 
 /*=====  End of mobile menu  ======*/
 
@@ -316,136 +332,13 @@ body {
 =            Mobile Menu Header            =
 =============================================*/
 
-/* #mobilemenu .headsection {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 15%;
-    padding: 20px 0;
-    position: relative;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-
-}
-
-
-
-#mobilemenu .quickLinks ul {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
-
-#mobilemenu .quickLinks {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    justify-content: end;
-}
-
-#mobilemenu .quickLinks ul li a {
-    font-size: 20px;
-    color: var(--gray-scale-gray-–-900);
-}
-
-#mobilemenu img {
-    display: inline-flex;
-
-
-} */
-
 /*=====  End of Mobile Menu Header  ======*/
 
 /*=============================================
 =            mobile menu items            =
 =============================================*/
-/* #mobilemenu .offcanvas-start {
-    padding-top: 27%;
-    text-align: center;
 
-}
-
-.dropdown-toggle {
-    background: none;
-    border: none;
-}
-
-#mobilemenu .offcanvas-body ul li a {
-    font-size: 25px;
-    font-family: var(--font-family);
-    color: var(--gray-scale-gray-–-500);
-}
-
-#mobilemenu .offcanvas-body ul li {
-    margin-bottom: 20px;
-
-}
-
-#mobilemenu .offcanvas-body ul li:hover a {
-    font-size: 30px;
-    font-family: var(--font-family);
-    color: var(--gray-scale-gray-–-900);
-}
-
-#mobilemenu .btn-secondary {
-    border: none;
-    background-color: white;
-    color: black;
-}
-
-#mobilemenu .dropdown-menu {
-    padding: 20px 20px;
-    text-align: center;
-}
-
-#mobilemenu .offcanvas-body .dropdown-menu li .dropdown-item {
-    font-size: 25px;
-    font-family: var(--font-family);
-    color: var(--gray-scale-gray-–-500);
-
-}
-
-#mobilemenu .offcanvas-body .dropdown-menu li:hover .dropdown-item {
-    font-size: 30px;
-    font-family: var(--font-family);
-    background-color: rgb(191, 221, 191);
-    color: var(--gray-scale-gray-–-900);
-
-}
-
-#mobilemenu {
-    position: fixed;
-    width: 100%;
-}
-
-#mobilemenu .searchMenu {
-    width: 100%;
-    margin: auto;
-    position: absolute;
-    left: 0;
-    z-index: 11;
-    top: 100%;
-    background-color: #fff;
-}
-
-#mobilemenu .searchMenu input {
-    width: 100%;
-}
-
-#mobilemenu span i {
-    top: 10px;
-    right: 5%;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-}
-
-#mobilemenu:hover span i {
-    color: rgb(47, 73, 47);
-}
-    /* Fixed Header */
+/* Fixed Header */
 /* Fixed Header */
 #mobilemenu {
     position: fixed;
@@ -853,28 +746,65 @@ body {
     position: relative;
 }
 
+.searchArea {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 .searchArea input {
     display: block;
     width: 100%;
+    padding: 15px 50px 15px 25px;
+    /* space for the button */
+    font-size: 20px;
     border: none;
-    border-bottom: 1px solid var(--gray-scale-gray-–-700);
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
     outline: none;
-    font-size: 35px;
-    padding-left: 25px;
+    color: #333;
 }
 
+.searchArea input:focus {
+    background-color: #fff;
+    border: 1px solid var(--gren-gray-scale-500, #618062);
+    box-shadow: 0 0 8px rgba(97, 128, 98, 0.3);
+}
+
+.searchArea input::placeholder {
+    color: #aaa;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.searchArea input:focus::placeholder {
+    color: transparent;
+}
 
 .searchArea button {
     position: absolute;
-    right: 0;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--branding-success);
+    background-color: var(--branding-success, #4CAF50);
     color: white;
     border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.searchArea button:hover {
+    background-color: #45a049;
 }
 
 .searchMenu .results {
@@ -892,7 +822,7 @@ body {
 
 .searchMenu .closeSearch {
     position: absolute;
-    top: 100px;
+    top: 116px;
     right: 30px;
     border: 1px solid var(--gray-scale-gray-–-500);
     border-radius: 50%;
@@ -1256,7 +1186,7 @@ body {
 
 
 
-/* Create a scroll timeline */
+
 
 
 
@@ -1296,6 +1226,10 @@ body {
     background-color: rgba(255, 255, 255, 0.07);
     height: 100%;
     margin: auto;
+}
+
+#Counter .counter1:hover {
+    transform: translateY(-10px);
 }
 
 /*=====  End of Counter  ======*/
@@ -1700,6 +1634,7 @@ body {
 =============================================*/
 #CustomerReviews {
     background-image: url(../images/Testimonials.png);
+    background: cover;
     padding: 70px 0px 80px 0px;
     position: relative;
 
@@ -1724,10 +1659,21 @@ body {
 
 #CustomerReviews .reviews1, #CustomerReviews .reviews2, #CustomerReviews .reviews3 {
     border-radius: 8px;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.07);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.12),
+        0 1px 4px rgba(0, 0, 0, 0.05);
     background-color: var(--gray-scale-white);
     margin: auto;
     padding: 24px 12px 12px 14px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#CustomerReviews .reviews1:hover, #CustomerReviews .reviews2:hover, #CustomerReviews .reviews3:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 8px 16px rgba(0, 0, 0, 0.15),
+        0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 #CustomerReviews .reviews1 .p1, #CustomerReviews .reviews2 .p1, #CustomerReviews .reviews3 .p1 {
@@ -1770,12 +1716,20 @@ body {
 }
 
 #CustomerReviews .reviews1 {
-    margin-right: 2px;
+    margin-right: 10px;
+    margin-left: 10px;
 
 }
 
 #CustomerReviews .reviews3 {
-    margin-left: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+#CustomerReviews .reviews2 {
+    margin-left: 10px;
+    margin-left: 10px;
 
 }
 
@@ -1794,7 +1748,7 @@ body {
     color: var(--gray-scale-gray-–-900);
 }
 
-#CustomerReviews .arrows:hover a {
+#CustomerReviews .arrows a:hover {
     background-color: var(--branding-success);
 
 }
@@ -1935,37 +1889,49 @@ body {
     margin-bottom: 50px;
 }
 
-#DekstopFooter .quickLinks a {
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    color: var(--gray-scale-gray-–-300);
-    padding: 10px 12px 8px 15px;
-    line-height: 20px;
-}
-
-#DekstopFooter .quickLinks a .fa-facebook-f {
-    margin-left: 4px;
-    width: 15px;
-    height: 8px;
-}
-
-#DekstopFooter .quickLinks a .fa-pinterest-p {
-    margin-left: 2px;
-}
-
-
-
 #DekstopFooter .quickLinks a i {
     width: 18px;
     height: 18px;
 }
 
-#DekstopFooter .quickLinks:hover a {
-    color: var(--gray-scale-white);
-    background-color: var(--branding-success);
+#DekstopFooter .quickLinks a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--gray-scale-gray-–-300);
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-sizing: border-box;
+    cursor: pointer;
 }
+
+#DekstopFooter .quickLinks a:hover {
+    background-color: var(--branding-success);
+    color: var(--gray-scale-white);
+}
+
+#DekstopFooter .quickLinks a i {
+    display: block;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    line-height: 1;
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+
+
 
 #DekstopFooter .account h4, #DekstopFooter .help h4, #DekstopFooter .proxy h4 {
     font-weight: 500;
@@ -2563,6 +2529,31 @@ body {
     border: 1px solid var(--gray-scale-gray-–-100);
     border-radius: 4px;
     padding: 10px 16px;
+    appearance: none;
+    /* Removes native arrow in most browsers */
+    -webkit-appearance: none;
+    /* For Safari/Chrome */
+    -moz-appearance: none;
+    outline: none;
+}
+
+#main .cartImage select:hover, #mobileSidemenuShop .row select:hover {
+    border-color: var(--branding-success-dark);
+}
+
+#main .cartImage select:focus, #mobileSidemenuShop .row select:focus {
+    border-color: var(--branding-success-dark);
+    box-shadow: 0 0 0 2px rgba(32, 181, 38, 0.2);
+}
+
+#main .cartImage select option, #mobileSidemenuShop .cartImage select option {
+    background-color: white;
+    color: black;
+}
+
+#main .cartImage select option:hover, #mobileSidemenuShop .cartImage select option:hover {
+    background-color: var(--branding-success-dark);
+    color: white;
 }
 
 #main .cartImage p, #mobileSidemenuShop .row p {
@@ -3209,7 +3200,7 @@ body {
     padding: 0px 3px;
     text-align: center;
     position: absolute;
-    right: 22%;
+    right: 25%;
     bottom: 65%;
 }
 
@@ -3239,17 +3230,23 @@ body {
 
 #bottomHeaderShop .mainMenu li:hover>a,
 #bottomHeaderShop .mainMenu li a.active {
-    color: var(--gray-scale-gray-–-900);
+    color: var(--branding-success-dark);
 }
 
 #bottomHeaderShop .mainMenu .submenu {
     position: absolute;
-    border: 1px solid #ccc;
-    min-width: 200px;
+    min-width: 240px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     opacity: 0;
     visibility: hidden;
-    margin-top: 50px;
-    transition: 0.35s ease;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    z-index: 1000;
+    padding: 8px 0;
+    margin-top: 5px;
 }
 
 #bottomHeaderShop .mainMenu .submenu a {
@@ -3259,12 +3256,35 @@ body {
 
 }
 
+#bottomHeaderShop .mainMenu .submenu li:hover {
+    background: rgba(147, 185, 131, 0.05);
+    color: #000;
+    padding-left: 10px;
+}
+
+#bottomHeaderShop .mainMenu .submenu li {
+    padding: 10px 20px;
+    transition: all 0.2s ease;
+}
+
 #bottomHeaderShop .mainMenu li:hover>.submenu {
     opacity: 1;
     visibility: visible;
-    margin-top: 0px;
-    z-index: 8;
-    background-color: white;
+    transform: translateY(0);
+}
+
+#bottomHeaderShop .mainMenu .submenu::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 20px;
+    width: 12px;
+    height: 12px;
+    background: white;
+    transform: rotate(45deg);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
+    z-index: -1;
 }
 
 #bottomHeaderShop .quickLinks {

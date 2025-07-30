@@ -143,6 +143,7 @@
     #foodstore {
         padding: 24px 14px;
     }
+
     #foodstore .foodstoreCnt .p1, #foodstore .foodstoreCnt .p3 {
         font-size: 16px;
         margin-left: 9%;
@@ -168,7 +169,7 @@
     #Counter h5 {
         font-size: 26px;
         line-height: 120%;
-        color: var(--gren-gray-scale-50);
+        color: var(--branding-success);
     }
 
     #sellerProduct .fa-arrow-right {
@@ -282,7 +283,23 @@
     /* #ShoppingCart .table1 {} */
 
     #topHeaderShop address {
-        font-size: 8px;
+        font-size: 10px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .address-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        /* Ensures text alignment is centered */
+    }
+
+    .address-container address {
+        margin: 0;
+        /* Removes default margin */
     }
 
     #subscriber button {

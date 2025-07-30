@@ -13,11 +13,19 @@
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <body>
+
+    <!-- For boxicon -->
+     <a href="#banner" id="scrollToBanner" class="scroll-box d-none d-lg-flex">
+          <i class='bx bx-up-arrow-alt'></i>
+    </a>
+
     <!-- For cursor -->
      <div class="cursor-sm d-lg-block d-none"></div>
 
@@ -59,11 +67,11 @@
                   </a>
 
                   <ul class="submenu">
-                    <li><a href="#" id="">Men's Fashion</a></li>
-                    <li><a href="#" id="">Women's Fashion</a></li>
-                    <li><a href="#" id="">Electronics</a></li>
-                    <li><a href="#" id="">Kids</a></li>
-                    <li><a href="#" id="">Others</a></li>
+                     <li><a href="#"><i class="fa-solid fa-shirt"></i> Men's Fashion</a></li>
+                     <li><a href="#"><i class="fa-solid fa-person-dress"></i> Women's Fashion</a></li>
+                     <li><a href="#"><i class="fa-solid fa-laptop"></i> Electronics</a></li>
+                     <li><a href="#"><i class="fa-solid fa-child"></i> Kids</a></li>
+                     <li><a href="#"><i class="fa-solid fa-ellipsis"></i> Others</a></li>
                   </ul>
                 </li>
                 <li><a href="#">Blog</a></li>
@@ -1263,12 +1271,12 @@
             <h2>Testimonial</h2>
             <h4>What Our Customer Says</h4>
             <div class="arrows">
-              <a href="#"><i class="fa-solid fa-arrow-left"></i></a>
-              <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+              <a href="#" id="prev"><i class="fa-solid fa-arrow-left"></i></a>
+              <a href="#" id="next"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="mainCnt">
-              <div class="row">
-                 <div class="col-lg-3 col-12 reviews1">
+              <div class="row review-slider">
+              <div class="col-lg-3 col-12 reviews1">
                 <img src="./images/Testimonial.png" class="img-fluid" alt="">
                 <p class="p1">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
                 <div class="row">
@@ -1328,6 +1336,68 @@
                   </div>
                 </div>
               </div>
+              <div class="col-lg-3 col-12 reviews1">
+                <img src="./images/Testimonial.png" class="img-fluid" alt="">
+                <p class="p1">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
+                <div class="row">
+                  <div class="col-2">
+                    <img src="./images/review1.png" alt="">
+                  </div>
+                  <div class="col-2 reviewer">
+                    <h5>Robert Fox</h5>
+                    <p>Customer</p>
+                  </div>
+                  <div class="col-6 stars">
+                     <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-12 reviews2">
+                <img src="./images/Testimonial.png" class="img-fluid" alt="">
+                <p class="p1">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
+                <div class="row">
+                  <div class="col-2">
+                    <img src="./images/review2.png" alt="">
+                  </div>
+                  <div class="col-2 reviewer">
+                    <h5>Dianne Russell</h5>
+                    <p>Customer</p>
+                  </div>
+                  <div class="col-6 stars">
+                     <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-12 reviews3">
+                <img src="./images/Testimonial.png" class="img-fluid" alt="">
+                <p class="p1">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
+                <div class="row">
+                  <div class="col-2">
+                    <img src="./images/review3.png" alt="">
+                  </div>
+                  <div class="col-2 reviewer">
+                    <h5>Eleanor Pena</h5>
+                    <p>Customer</p>
+                  </div>
+                  <div class="col-6 stars">
+                     <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              
+              
 
               </div>
              
