@@ -133,90 +133,79 @@
         </div>
       </section>
       <!-- Bottom header ends -->
-      <!-- Background header -->
-      <section id="backgroundHeader" class="d-none d-md-block">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4">
-              <a href="./index.html">
-                <i class="fa-solid fa-house"></i>
-              </a>
-              <a href="#"><span>> Categories > Vegetables</span> </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Background Header ends -->
+      
 
       <!-- Mobile Header -->
-      <section id="mobileHeaderShop" class="d-lg-none">
-        <button
-          class="btn btn-primary"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasTop"
-          aria-controls="offcanvasTop"
-        >
-          <i class="fa-solid fa-align-center"></i>
-        </button>
-        <a href="./index.html " class="image">
-          <img src="./images/logo.png" alt="" />
-        </a>
-        <a class="quickLink" href="tel:2195550114"
-          ><span><i class="fa-solid fa-phone-volume"></i></span> (219)
-          555-0114</a
-        >
-        <div
-          class="offcanvas offcanvas-top"
-          tabindex="-1"
-          id="offcanvasTop"
-          aria-labelledby="offcanvasTopLabel"
-        >
-          <div class="offcanvas-header">
-            <div class="col-6">
-              <a href="./index.html">
-                <img src="./images/logo.png" alt="" />
-              </a>
-            </div>
-            <div class="col-6 quickLinks">
-              <ul>
-                <li>
-                  <a href="./wishlist.html"
-                    ><i class="fa-regular fa-heart"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="./shopping_cart.html"
-                    ><i class="fa-solid fa-bag-shopping"></i
-                  ></a>
-                </li>
-                <a href="#" class="cartno"><span>3</span></a>
-                <div class="cartlines">
-                  <p>Shopping cart:</p>
-                  <h2>$57.00</h2>
-                </div>
-              </ul>
-            </div>
+  <section id="mobileHeaderShop" class="d-lg-none">
+  <div class="mobile-top-bar">
+    <button
+      class="btn menu-toggle"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasTop"
+      aria-controls="offcanvasTop"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <a href="./index.html" class="logo">
+      <img src="./images/logo.png" alt="Ecobazar Logo" />
+    </a>
+    <div class="header-actions">
+      <a href="./wishlist.html" class="wishlist-icon">
+        <i class="fa-regular fa-heart"></i>
+      </a>
+      <a href="./shopping_cart.html" class="cart-icon">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-badge">3</span>
+      </a>
+    </div>
+  </div>
+  
+  <div class="mobile-search-bar">
+    <form class="search-form">
+      <input type="text" placeholder="Search organic products..." />
+      <button type="submit" class="search-btn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+  </div>
+
+  <div class="offcanvas offcanvas-top mobile-menu" tabindex="-1" id="offcanvasTop">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav class="mobile-nav">
+        <ul class="nav-links">
+          <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="./shop.html"><i class="fas fa-store"></i> Shop</a></li>
+          <li><a href="./categories.html"><i class="fas fa-list"></i> Categories</a></li>
+          <li><a href="./about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li><a href="./contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        
+        <div class="menu-divider"></div>
+        
+        <ul class="nav-links">
+          <li><a href="./account.html"><i class="fas fa-user"></i> My Account</a></li>
+          <li><a href="./wishlist.html"><i class="fas fa-heart"></i> Wishlist</a></li>
+        </ul>
+        
+        <div class="menu-divider"></div>
+        
+        <div class="cart-summary">
+          <div class="cart-total">
+            <span>Cart Total:</span>
+            <strong>$57.00</strong>
           </div>
-          <div class="row bottomSide">
-            <div class="col-6 links d-flex">
-              <form action="">
-                <input type="text" placeholder="Search" />
-                <button>Search</button>
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </form>
-            </div>
-          </div>
-          <button
-            type="button"
-            class="col-2 btn-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
+          <a href="./shopping_cart.html" class="btn view-cart-btn">View Cart</a>
         </div>
-      </section>
-      <section id="bottomHeaderShop2" class="d-lg-none">
+      </nav>
+    </div>
+  </div>
+</section>
+      <!-- <section id="bottomHeaderShop2" class="d-lg-none">
         <div class="container">
           <div class="row">
             <div class="col-lg-5">
@@ -244,25 +233,44 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Mobile header ends -->
-    </header>
-    <!-- Header section ends -->
-    <!-- sidemenu for mobile -->
-    <section id="mobileSidemenuShop" class="d-lg-none">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="col-lg-8">
-            <button
+       <!-- Background header -->
+      <section id="backgroundHeader" >
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <a href="./index.html">
+                <i class="fa-solid fa-house"></i>
+              </a>
+              <a href="#"><span>> Categories > Vegetables</span> </a>
+            </div>
+            <div class="col-lg-6 d-lg-none d-flex justify-content-end align-items-center">
+              <button
               class="btn btn-primary"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasScrolling"
               aria-controls="offcanvasScrolling"
             >
-              Filter<i class="fa-solid fa-sliders"></i>
+             <i class="fa-solid fa-sliders"></i>
             </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Background Header ends -->
+   
+    </header>
+    <section id="mobileSidemenuShop" class="d-lg-none">
+    <!-- Header section ends -->
+    <!-- sidemenu for mobile -->
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col-lg-8">
+            
           </div>
         </div>
 
@@ -274,14 +282,24 @@
           id="offcanvasScrolling"
           aria-labelledby="offcanvasScrollingLabel"
         >
-          <div class="offcanvas-header">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
+          <div class="offcanvas-header d-flex justify-content-between align-items-center px-3 py-2 border-bottom">
+  <!-- Logo -->
+  <a href="./index.html">
+    <img src="./images/logo.png" alt="Logo" style="height: 40px;" />
+  </a>
+
+  <!-- Close Button -->
+  <button
+    type="button"
+    class="btn btn-light rounded-circle shadow-sm"
+    data-bs-dismiss="offcanvas"
+    aria-label="Close"
+    style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background-color: white; color: black; border: 1px solid grey; :hover { background-color: var(--branding-success); :hover i { color: white; } }"
+  >
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+</div>
+
           <div class="offcanvas-body">
             <div class="accordion" id="accordionExample1">
                 <div class="accordion-item">
@@ -573,9 +591,13 @@
               </div>
             </div>
           </div>
+           <div class="offcanvas-footer">
+    <p>&copy; 2025 EcoBazar. All rights reserved.</p>
+  </div>
         </div>
       </div>
     </section>
+   
 
     <!-- Sidemenu for mobile ends -->
 
