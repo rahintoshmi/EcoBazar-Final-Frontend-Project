@@ -22,10 +22,15 @@ $(document).ready(function(){
   });
   //mobile menu cancel icon
    // Add this to your existing JS
-document.querySelector('.fa-xmark').addEventListener('click', function() {
-    var offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasExample'));
-    offcanvas.hide();
-});
+const closeBtn = document.querySelector('.fa-xmark');
+if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+        var offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasExample'));
+        if (offcanvas) {
+            offcanvas.hide();
+        }
+    });
+}
 //for boxicon
 const scrollBtn = document.getElementById("scrollToBanner");
   const banner = document.getElementById("banner");

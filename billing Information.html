@@ -17,14 +17,18 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <body>
      <!-- For cursor -->
-     <div class="cursor"></div>
-     <div class="cursor-sm"></div>
+     <div class="cursor-sm d-lg-block d-none"></div>
+     <!-- For boxicon -->
+     <a href="#banner" id="scrollToBanner" class="scroll-box d-none d-lg-flex">
+          <i class='bx bx-up-arrow-alt'></i>
+    </a>
 
     <!-- For cursor ends -->
     <!-- Header section -->
@@ -33,13 +37,13 @@
       <section id="topHeaderShop">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-md-6">
+            <div class="col-md-6 address-container d-flex justify-content-start align-items-center">
               <address>
                 <span><i class="fa-solid fa-location-dot"></i></span>
                 Store Location: Lincoln- 344, Illinois, Chicago, USA
               </address>
             </div>
-            <div class="col-md-6 d-flex justify-content-end align-items-center">
+            <div class="col-md-6 d-none d-lg-flex justify-content-end align-items-center content">
               <select>
                 <option>ENG</option>
                 <option>BAN</option>
@@ -75,10 +79,14 @@
             <div class="col-lg-4 quickLinks">
               <ul>
                 <li>
-                  <a href="./wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                  <a href="./wishlist.html"
+                    ><i class="fa-regular fa-heart"></i
+                  ></a>
                 </li>
                 <li>
-                  <a href="./shopping_cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                  <a href="./shopping_cart.html"
+                    ><i class="fa-solid fa-bag-shopping"></i
+                  ></a>
                 </li>
                 <a href="#" class="cartno"><span>3</span></a>
                 <div class="cartlines">
@@ -106,17 +114,17 @@
                   </a>
 
                   <ul class="submenu">
-                    <li><a href="#" id="">Men's Fashion</a></li>
-                    <li><a href="#" id="">Women's Fashion</a></li>
-                    <li><a href="#" id="">Electronics</a></li>
-                    <li><a href="#" id="">Kids</a></li>
-                    <li><a href="#" id="">Others</a></li>
+                     <li><a href="#"><i class="fa-solid fa-shirt"></i> Men's Fashion</a></li>
+                     <li><a href="#"><i class="fa-solid fa-person-dress"></i> Women's Fashion</a></li>
+                     <li><a href="#"><i class="fa-solid fa-laptop"></i> Electronics</a></li>
+                     <li><a href="#"><i class="fa-solid fa-child"></i> Kids</a></li>
+                     <li><a href="#"><i class="fa-solid fa-ellipsis"></i> Others</a></li>
                   </ul>
                 </li>
                 <li><a href="#">Pages</a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About us</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./about.html">About us</a></li>
               </ul>
             </div>
             <div class="col-lg-5 quickLinks">
@@ -129,118 +137,99 @@
         </div>
       </section>
       <!-- Bottom header ends -->
-      <!-- Background header -->
-      <section id="backgroundHeader">
+      
+
+      <!-- Mobile Header -->
+  <section id="mobileHeaderShop" class="d-lg-none">
+  <div class="mobile-top-bar">
+    <button
+      class="btn menu-toggle"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasTop"
+      aria-controls="offcanvasTop"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <a href="./index.html" class="logo">
+      <img src="./images/logo.png" alt="Ecobazar Logo" />
+    </a>
+    <div class="header-actions">
+      <a href="./wishlist.html" class="wishlist-icon">
+        <i class="fa-regular fa-heart"></i>
+      </a>
+      <a href="./shopping_cart.html" class="cart-icon">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-badge">3</span>
+      </a>
+    </div>
+  </div>
+  
+  <div class="mobile-search-bar">
+    <form class="search-form">
+      <input type="text" placeholder="Search organic products..." />
+      <button type="submit" class="search-btn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+  </div>
+
+  <div class="offcanvas offcanvas-top mobile-menu" tabindex="-1" id="offcanvasTop">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav class="mobile-nav">
+        <ul class="nav-links">
+          <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="./shop.html"><i class="fas fa-store"></i> Shop</a></li>
+          <li><a href="./categories.html"><i class="fas fa-list"></i> Categories</a></li>
+          <li><a href="./about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li><a href="./contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        
+        <div class="menu-divider"></div>
+        
+        <ul class="nav-links">
+          <li><a href="#"><i class="fas fa-user"></i> My Account</a></li>
+          <li><a href="./wishlist.html"><i class="fas fa-heart"></i> Wishlist</a></li>
+        </ul>
+        
+        <div class="menu-divider"></div>
+        
+        <div class="cart-summary">
+          <div class="cart-total">
+            <span>Cart Total:</span>
+            <strong>$57.00</strong>
+          </div>
+          <a href="./shopping_cart.html" class="btn view-cart-btn">View Cart</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</section>
+      
+
+      <!-- Mobile header ends -->
+       <!-- Background header -->
+      <section id="backgroundHeader" >
         <div class="container">
           <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-6">
               <a href="./index.html">
                 <i class="fa-solid fa-house"></i>
               </a>
-              <a href="./shopping_cart.html">> Shopping cart > Checkout</a>
+              <a href="#"><span> > Shopping cart > Checkout</span> </a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Background Header ends -->
-
-      <!-- Mobile Header -->
-      <section id="mobileHeaderShop" class="d-lg-none">
-        <button
-          class="btn btn-primary"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasTop"
-          aria-controls="offcanvasTop"
-        >
-          <i class="fa-solid fa-align-center"></i>
-        </button>
-        <a href="./index.html " class="image">
-          <img src="./images/logo.png" alt="" />
-        </a>
-        <a class="quickLink" href="tel:2195550114"
-          ><span><i class="fa-solid fa-phone-volume"></i></span> (219)
-          555-0114</a
-        >
-        <div
-          class="offcanvas offcanvas-top"
-          tabindex="-1"
-          id="offcanvasTop"
-          aria-labelledby="offcanvasTopLabel"
-        >
-          <div class="offcanvas-header">
-            <div class="col-6">
-              <a href="./index.html">
-                <img src="./images/logo.png" alt="" />
-              </a>
-            </div>
-            <div class="col-6 quickLinks">
-              <ul>
-                <li>
-                  <a href="./wishlist.html"><i class="fa-regular fa-heart"></i></a>
-                </li>
-                <li>
-                  <a href="./shopping_cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
-                </li>
-                <a href="#" class="cartno"><span>3</span></a>
-                <div class="cartlines">
-                  <p>Shopping cart:</p>
-                  <h2>$57.00</h2>
-                </div>
-              </ul>
-            </div>
-          </div>
-          <div class="row bottomSide">
-            <div class="col-6 links d-flex">
-              <form action="">
-                <input type="text" placeholder="Search" />
-                <button>Search</button>
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </form>
-            </div>
-          </div>
-          <button
-            type="button"
-            class="col-2 btn-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
-        </div>
-      </section>
-      <section id="bottomHeaderShop2" class="d-lg-none">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5">
-              <ul class="mainMenu">
-                <li><a href="./index.html" class="active">Home</a></li>
-                <li>
-                  <a href="./shop.html"
-                    >Shop
-                    <span><i class="fa-solid fa-angle-down"></i></span>
-                  </a>
-
-                  <ul class="submenu">
-                    <li><a href="#" id="">Men's Fashion</a></li>
-                    <li><a href="#" id="">Women's Fashion</a></li>
-                    <li><a href="#" id="">Electronics</a></li>
-                    <li><a href="#" id="">Kids</a></li>
-                    <li><a href="#" id="">Others</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About us</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Mobile header ends -->
+   
     </header>
-    <!-- Header section ends -->
+    
 
     <main>
       <section id="billingInformation">
@@ -491,14 +480,14 @@
             </div>
             <div class="col-lg-2 help">
               <h4>Helps</h4>
-              <a href="#">Contact</a> <br />
+              <a href="./contact.html">Contact</a> <br />
               <a href="#">Faqs</a> <br />
               <a href="#">Terms & Condition</a> <br />
               <a href="#">Privacy Policy</a>
             </div>
             <div class="col-lg-2 proxy">
               <h4>Proxy</h4>
-              <a href="#">About</a> <br />
+              <a href="./about.html">About</a> <br />
               <a href="./shop.html">Shop</a> <br />
               <a href="#">Product</a> <br />
               <a href="./billing Information.html">Track Order</a>

@@ -15,16 +15,21 @@
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
-    />
+      />
+      
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <body>
     <!-- For cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-sm"></div>
+     <div class="cursor-sm d-lg-block d-none"></div>
+     <!-- For boxicon -->
+     <a href="#banner" id="scrollToBanner" class="scroll-box d-none d-lg-flex">
+          <i class='bx bx-up-arrow-alt'></i>
+    </a>
 
     <!-- For cursor ends -->
     <!-- Header section -->
@@ -33,13 +38,13 @@
       <section id="topHeaderShop">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-md-6 address-container">
+            <div class="col-md-6 address-container d-flex justify-content-start align-items-center">
               <address>
                 <span><i class="fa-solid fa-location-dot"></i></span>
                 Store Location: Lincoln- 344, Illinois, Chicago, USA
               </address>
             </div>
-            <div class="col-md-6 d-flex justify-content-end align-items-center d-none d-lg-block">
+            <div class="col-md-6 d-none d-lg-flex justify-content-end align-items-center content">
               <select>
                 <option>ENG</option>
                 <option>BAN</option>
@@ -119,8 +124,8 @@
                 </li>
                 <li><a href="#">Pages</a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About us</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./about.html">About us</a></li>
               </ul>
             </div>
             <div class="col-lg-5 quickLinks">
@@ -205,37 +210,7 @@
     </div>
   </div>
 </section>
-      <!-- <section id="bottomHeaderShop2" class="d-lg-none">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5">
-              <ul class="mainMenu">
-                <li><a href="./index.html" class="active">Home</a></li>
-                <li>
-                  <a href="./shop.html"
-                    >Shop
-                    <span><i class="fa-solid fa-angle-down"></i></span>
-                  </a>
-
-                  <ul class="submenu">
-                    <li><a href="#" id="">Men's Fashion</a></li>
-                    <li><a href="#" id="">Women's Fashion</a></li>
-                    <li><a href="#" id="">Electronics</a></li>
-                    <li><a href="#" id="">Kids</a></li>
-                    <li><a href="#" id="">Others</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About us</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section> -->
-
-      <!-- Mobile header ends -->
+     
        <!-- Background header -->
       <section id="backgroundHeader" >
         <div class="container">
@@ -1594,14 +1569,14 @@
             </div>
             <div class="col-lg-2 help">
               <h4>Helps</h4>
-              <a href="#">Contact</a> <br />
+              <a href="./contact.html">Contact</a> <br />
               <a href="#">Faqs</a> <br />
               <a href="#">Terms & Condition</a> <br />
               <a href="#">Privacy Policy</a>
             </div>
             <div class="col-lg-2 proxy">
               <h4>Proxy</h4>
-              <a href="#">About</a> <br />
+              <a href="./about.html">About</a> <br />
               <a href="./shop.html">Shop</a> <br />
               <a href="#">Product</a> <br />
               <a href="./billing Information.html">Track Order</a>
