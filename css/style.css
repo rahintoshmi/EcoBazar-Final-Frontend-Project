@@ -3989,7 +3989,7 @@ a {
     font-size: 14px;
     line-height: 150%;
     color: var(--gray-scale-gray-–-900);
-    margin-left: 70%;
+    /* margin-left: 70%; */
 }
 
 #ShoppingCart .cartTable a {
@@ -4001,6 +4001,18 @@ a {
     padding: 16px 40px;
     background-color: var(--branding-success);
     margin-left: 15%;
+}
+
+#ShoppingCart .cartTable .subtotal1 {
+    margin-left: 65%;
+}
+
+#ShoppingCart .cartTable .subtotal2 {
+    margin-left: 69%;
+}
+
+#ShoppingCart .cartTable .subtotal3 {
+    margin-left: 71%;
 }
 
 #ShoppingCart .coupon {
@@ -4310,7 +4322,8 @@ a {
 
 #billingInformation .order input[type="radio"] {
     accent-color: var(--branding-success-dark);
-    margin-right: 5px;
+    margin-right: -47%;
+    margin-top: 10px;
 }
 
 #billingInformation .order a {
@@ -4327,19 +4340,34 @@ a {
 
 }
 
-.payment-methods {
-    display: block;
-    /* Flex container */
-    gap: 20px;
-    /* Space between items */
+.payment {
+    display: flex;
     align-items: center;
-    /* Center vertically */
-    flex-wrap: wrap;
-    /* Wrap if space is small */
+    gap: 10px;
+    margin-left: 10px; 
+    margin-right: 92%;
 }
 
-.payment-methods label {
-    display: block;
+.payment input {
+    margin: 0;
+    /* Remove default margins */
+    cursor: pointer;
+    flex-shrink: 0;
+    width: 16px;
+    /* Optional: Adjust radio button size */
+    height: 16px;
+    /* Optional: Adjust radio button size */
+}
+
+.payment label {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--gray-scale-gray-–-700);
+    white-space: nowrap;
+    margin-left: 4px;
+    /* Fine-tuned spacing */
 }
 
 /*=====  End of billing body  ======*/
