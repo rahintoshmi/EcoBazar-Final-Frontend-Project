@@ -114,6 +114,7 @@
 
     .productCard {
         margin-bottom: 10px;
+        overflow-y: scroll;
     }
 
     #productCategory .heading2 h2 {
@@ -554,12 +555,6 @@
         margin-top: 10px;
     }
 
-    /* #wishlist .row .quickLinks{
-        margin-left: 5px;
-
-    } */
-
-
     #productDetailsShop .instock {
         padding: 6px 25px;
         font-size: 15px;
@@ -658,11 +653,10 @@
         flex-wrap: nowrap;
     }
 
-
-
     #wishlist .cross {
         display: none;
     }
+
 
     #wishlist .quickLinks {
         margin-top: 39px;
@@ -676,6 +670,10 @@
     #wishlist .share {
         margin-left: 0px;
         margin-top: 38px;
+    }
+
+    #main .productCard .productThumb img {
+        width: 100%;
     }
 
     #wishlist .quickLinks a {

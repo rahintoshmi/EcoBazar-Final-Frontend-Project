@@ -1376,7 +1376,7 @@ a {
     left: 16px;
 }
 
-#sellerProduct.productCard .productThumb .quickLinks {
+#sellerProduct .productCard .productThumb .quickLinks {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -2937,6 +2937,11 @@ a {
 
 #main .card, #mobileSidemenuShop .card {
     position: relative;
+}
+
+#main .productCard .productThumb img {
+    width: 302px;
+    border-radius: 8px 8px 0px 0px
 }
 
 #backgroundHeader .row {
