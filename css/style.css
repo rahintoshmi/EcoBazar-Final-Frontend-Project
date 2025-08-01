@@ -1907,6 +1907,7 @@ a {
     background-image: url(../images/Footer_BG.png);
     padding: 80px 0 29px;
     background-color: var(--gray-scale-gray-–-900);
+    background-size: cover;
 }
 
 #DekstopFooter .logo p {
