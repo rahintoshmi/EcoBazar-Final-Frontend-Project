@@ -201,6 +201,7 @@
         justify-content: center;
         background-size: cover;
         width: 100%;
+        margin-bottom: 13px;
     }
 
     #SmallCards .quickLinks {
@@ -242,6 +243,17 @@
         gap: 7%;
     }
 
+    #NewsCards .cardCnt .row .comment {
+        padding-right: 0px;
+    }
+
+    #NewsCards .cardCnt {
+        padding: 24px 24px 30px 24px;
+        background-color: var(--gray-scale-white);
+        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.08);
+        max-width: 100%;
+    }
+
     #Steps {
         padding: 1px 0;
     }
@@ -263,6 +275,24 @@
         justify-content: space-between;
         margin-bottom: 10px;
     }
+
+    #NewsCards .card {
+        width: 100%;
+        background-color: white;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+    }
+
+    #NewsCards .cardImg img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+
 
     #Steps .card2 {
         padding: 15px 15px;
@@ -628,6 +658,8 @@
         flex-wrap: nowrap;
     }
 
+
+
     #wishlist .cross {
         display: none;
     }
@@ -635,6 +667,10 @@
     #wishlist .quickLinks {
         margin-top: 39px;
         padding: 0px 24px 0px 10px;
+    }
+
+    #sellerProduct .productCard {
+        height: 240px;
     }
 
     #wishlist .share {

@@ -125,6 +125,16 @@ body {
     z-index: 9999;
 }
 
+a {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--gray-scale-gray-–-500);
+    transition: 0.25s;
+
+}
+
 /* CSS comments Ends */
 
 
@@ -182,13 +192,22 @@ body {
     margin-top: 5px;
 }
 
-#mainHeader .mainMenu li a {
+#mainHeader .mainMenu .submenu li a {
+    display: flex;
+    /* Align icon + text horizontally */
+    align-items: center;
+    /* Vertically center them */
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    gap: 10px;
+    /* ✅ Add space between icon and text */
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 14px;
     line-height: 150%;
-    color: var(--gray-scale-gray-–-500);
-    transition: 0.25s;
+    color: var(--gray-scale-gray-–-900);
+    text-decoration: none;
 }
 
 #mainHeader .mainMenu li:hover>a,
@@ -274,6 +293,15 @@ body {
 #mainHeader .quickLinks ul li a {
     font-size: 20px;
     color: var(--gray-scale-gray-–-900);
+}
+
+#mainHeader .mainMenu .submenu li i {
+    font-size: 16px;
+    color: var(--branding-success-dark);
+    /* Customize as needed */
+    min-width: 20px;
+    /* Ensures alignment even if some icons are narrower */
+    text-align: center;
 }
 
 /*=====  End of MainHeader  ======*/
@@ -1548,6 +1576,7 @@ body {
 #NewsCards .cards {
     box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.08);
     position: relative;
+
 }
 
 #NewsCards .cardCnt {
@@ -1634,7 +1663,10 @@ body {
 =============================================*/
 #CustomerReviews {
     background-image: url(../images/Testimonials.png);
-    background: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Optional but helps */
     padding: 70px 0px 80px 0px;
     position: relative;
 
@@ -3224,7 +3256,7 @@ body {
 #mainHeaderShop input {
     outline: none;
     border: 1px solid var(--gray-scale-gray-–-100);
-    padding: 12px 18px 12px 28px;
+    padding: 12px 18px 12px 49px;
     border-radius: 6px 0px 0px 6px;
 }
 
@@ -3342,10 +3374,18 @@ body {
 }
 
 #bottomHeaderShop .mainMenu .submenu a {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* spacing between icon and text */
     padding: 8px 13px;
 
 
+}
+
+#bottomHeaderShop .mainMenu .submenu i {
+    width: 20px;
+    text-align: center;
 }
 
 #bottomHeaderShop .mainMenu .submenu li:hover {
