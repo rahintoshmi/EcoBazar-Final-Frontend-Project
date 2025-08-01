@@ -1908,6 +1908,7 @@ a {
     padding: 80px 0 29px;
     background-color: var(--gray-scale-gray-–-900);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 #DekstopFooter .logo p {
